@@ -41,60 +41,40 @@ loadLogo("logo", {
 
 
 // btn
-function loadBtn(id, options) {
-    fetch('../components/btn.html')
+function loadBtn(el, text, icon) {
+    fetch('components/btn.html')
         .then(response => response.text())
         .then(data => {
 
-            let html = data
-                .replace('{{variant}}', options.variant)
-                .replace('{{texte}}', options.text)
-                .replace('{{icon}}', options.icon);
+            let html = data.replace('{{texte}}', text)
+                .replace('{{icon}}', icon);
 
-            document.getElementById(id).innerHTML = html;
+            el.innerHTML = html;
         });
 }
 
-const btn = [
-    { id: "btn", text: "suivre", icon: "../assets/icon/fleche.png" },
-    { id: "btn2", text: "suivre", icon: "../assets/icon/fleche.png" },
-    { id: "btn3", text: "suivre", icon: "../assets/icon/fleche.png" },
-    { id: "btn4", text: "suivre", icon: "../assets/icon/fleche.png" },
-    { id: "btn5", text: "suivre", icon: "../assets/icon/fleche.png" }
-];
+document.querySelectorAll('.btn').forEach(el => {
+    const text = el.dataset.text;
+    const icon = el.dataset.icon;
+    loadBtn(el, text, icon);
+});
 
-btn.forEach(btn => {
-    loadBtn(btn.id, {
-        variant: "primary",
-        text: btn.text,
-        icon: btn.icon
-    });
-})
 
 // separate
-function loadSeparate(id, options) {
+function loadSeparate(el, img) {
     fetch("components/separate.html")
         .then(response => response.text())
         .then(data => {
 
-            let html = data.replace('{{img}}', options.img);
+            let html = data.replace('{{img}}', img);
 
-            document.getElementById(id).innerHTML = html;
+            el.innerHTML = html;
         });
 }
 
-const separates = [
-  { id: "separate", img: "assets/img/separate1.png" },
-  { id: "separate2", img: "assets/img/separate2.png" },
-  { id: "separate3", img: "assets/img/separate3.png" },
-  { id: "separate4", img: "assets/img/separate4.png" },
-  { id: "separate5", img: "assets/img/separate5.png" }
-];
-
-separates.forEach(item => {
-  loadSeparate(item.id, {
-    img: item.img
-  });
+document.querySelectorAll('.separate').forEach(el => {
+    const img = el.dataset.img;
+    loadSeparate(el, img);
 });
 
 // social media

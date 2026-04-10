@@ -6,7 +6,7 @@
 @import url('./layout/footer.css');
 
 /* components */
-@import url('./components/button.css');
+@import url('./components/btn.css');
 @import url('./components/navbar.css');
 @import url('./components/cardHour.css');
 @import url('./components/logo.css');
@@ -15,3 +15,11 @@
 
 /* Pages */
 @import url('./pages/home.css');
+
+/* fonts */
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('../assets/fonts/RobotoMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+};

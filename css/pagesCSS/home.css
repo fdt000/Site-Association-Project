@@ -10,3 +10,10 @@
 
     box-shadow: à -10px 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+.socialMedia-title h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
