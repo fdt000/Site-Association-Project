@@ -1,0 +1,12 @@
+/* effet de recouvrement */
+.main {
+    margin-top: -120px;
+    position: relative;
+    z-index: 20;
+
+    background: white;
+    border-radius: 20px 20px 0 0;
+    padding: 30px;
+
+    box-shadow: à -10px 10px 20px rgba(0, 0, 0, 0.2);
+}

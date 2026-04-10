@@ -36,7 +36,7 @@ function loadLogo(id, options) {
 }
 
 loadLogo("logo", {
-    image: "#"
+    image: ""
 });
 
 
