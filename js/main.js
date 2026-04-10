@@ -71,7 +71,31 @@ btn.forEach(btn => {
     });
 })
 
+// separate
+function loadSeparate(id, options) {
+    fetch("components/separate.html")
+        .then(response => response.text())
+        .then(data => {
 
+            let html = data.replace('{{img}}', options.img);
+
+            document.getElementById(id).innerHTML = html;
+        });
+}
+
+const separates = [
+  { id: "separate", img: "assets/img/separate1.png" },
+  { id: "separate2", img: "assets/img/separate2.png" },
+  { id: "separate3", img: "assets/img/separate3.png" },
+  { id: "separate4", img: "assets/img/separate4.png" },
+  { id: "separate5", img: "assets/img/separate5.png" }
+];
+
+separates.forEach(item => {
+  loadSeparate(item.id, {
+    img: item.img
+  });
+});
 
 // social media
 function loadSocialButton(id, platform, text, link) {
@@ -88,31 +112,3 @@ function loadSocialButton(id, platform, text, link) {
 }
 
 loadComponent("page-social", "components/socialMedia.html");
-
-// separate
-function loadSeparate(id, options) {
-    fetch("../components/separate.html")
-        .then(response => response.text())
-        .then(data => {
-
-            let html = data.replace('{{image}}', options.image);
-
-            document.getElementById(id).innerHTML = html;
-        });
-}
-
-loadSeparate("separate", {
-    image: '#'
-});
-loadSeparate("separate2", {
-    image: '#'
-});
-loadSeparate("separate3", {
-    image: '#'
-});
-loadSeparate("separate4", {
-    image: '#'
-});
-loadSeparate("separate5", {
-    image: '#'
-});

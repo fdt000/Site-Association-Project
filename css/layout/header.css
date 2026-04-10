@@ -1,6 +1,3 @@
-
-
-
 .header {
     position: sticky;
     top: 0;
@@ -13,10 +10,27 @@
 }
 
 
-.header-container{
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .header-logo {
     height: 20vh;
+}
+
+.header.navBar {
+    height: 10vh;
+}
+
+.light-column {
+    position: absolute;
+    width: 84.06px;
+    height: 550px;
+    left: 14.85%;
+    top: 1px;
+
+    background: linear-gradient(180deg, rgba(244, 244, 244, 0) 0%, rgba(244, 244, 244, 0) 23.08%, rgba(244, 244, 244, 0.41) 38.94%, rgba(244, 244, 244, 0.842047) 84.13%, #F4F4F4 100%);
+
 }
