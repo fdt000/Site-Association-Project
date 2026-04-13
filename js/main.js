@@ -92,3 +92,17 @@ function loadSocialButton(id, platform, text, link) {
 }
 
 loadComponent("page-social", "components/socialMedia.html");
+
+
+// presse
+function loadPresseLink(el, link, text) {
+    fetch("components/presse.html")
+        .then(res => res.text())
+        .then(data => {
+
+            let html = data.replace("{{link}}", link)
+                .replace("{{text}}", text);
+
+            el.innerHTML = html;
+        });
+}
