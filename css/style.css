@@ -15,6 +15,11 @@
 
 /* Pages */
 @import url('./pages/home.css');
+@import url('./pages/saison2026.css');
+@import url('./pagesCSS/effetMer.css');
+@import url('./pagesCSS/evnmt.css');
+@import url('./pagesCSS/aPropos.css');
+@import url('./pages/contact.css');
 
 /* fonts */
 @font-face {
