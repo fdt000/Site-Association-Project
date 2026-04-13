@@ -95,14 +95,18 @@ loadComponent("page-social", "components/socialMedia.html");
 
 
 // presse
-function loadPresseLink(el, link, text) {
+function loadPresseLink(el, link,) {
     fetch("components/presse.html")
         .then(res => res.text())
         .then(data => {
 
             let html = data.replace("{{link}}", link)
-                .replace("{{text}}", text);
 
             el.innerHTML = html;
         });
 }
+
+document.querySelectorAll('.presse-link').forEach(el => {
+    const link = el.dataset.link;
+    loadPresseLink(el, link,);
+});
