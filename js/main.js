@@ -42,7 +42,7 @@ loadLogo("logo", {
 
 // btn
 function loadBtn(el, text, icon) {
-    fetch('components/btn.html')
+    fetch('/components/btn.html')
         .then(response => response.text())
         .then(data => {
 
@@ -62,7 +62,7 @@ document.querySelectorAll('.btn').forEach(el => {
 
 // separate
 function loadSeparate(el, img) {
-    fetch("components/separate.html")
+    fetch("/components/separate.html")
         .then(response => response.text())
         .then(data => {
 
@@ -79,7 +79,7 @@ document.querySelectorAll('.separate').forEach(el => {
 
 // social media
 function loadSocialButton(id, platform, text, link) {
-    fetch("components/button-social.html")
+    fetch("/components/button-social.html")
         .then(res => res.text())
         .then(data => {
             let html = data
@@ -96,7 +96,7 @@ loadComponent("page-social", "components/socialMedia.html");
 
 // presse
 function loadPresseLink(el, link,) {
-    fetch("components/presse.html")
+    fetch("/components/presse.html")
         .then(res => res.text())
         .then(data => {
 
