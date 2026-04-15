@@ -1,3 +1,63 @@
+.saison2026-intro {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* mobile */
+/* quand ont passe en mobile ont met sur une coln les bloc img et text,
+passe l'un en dessous de l'autre */
+@media (max-width: 768px) {
+    .saison2026-intro {
+        grid-template-columns: 1fr;
+    }
+}
+
+.saison2026-intro img {
+    width: 100%;
+    height: auto;
+}
+
 .saison2026-intro-content {
-    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    /* pour positionner correctement le texte verticale : 1*/
+    position: relative;
+
+}
+
+.saison2026-intro-content-vertical {
+    /* pour positionner correctement le texte verticale : 2 */
+    /* utilisation de absolute pour layout global → mauvais
+    absolute pour élément décoratif → parfait */
+    position: absolute;
+    left: -40px;
+    top: 0;
+
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    letter-spacing: 2px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .vertical-text {
+        position: static;
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+}
+
+.saison2026-intro-content-textBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

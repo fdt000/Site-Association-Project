@@ -6,3 +6,37 @@
 }
 
 /*base*/
+
+/* MAIN */
+
+.saison2026-main {
+    margin: 0 20px;
+}
+
+/* FONT SIZE */
+
+h2 {
+    font-size: clamp(40px, 4vw, 60px);
+    font-family: 'Playfaire Display';
+}
+
+h3 {
+    font-size: clamp(18px, 2vw, 28px);
+}
+
+h4 {
+    font-size: clamp(20px, 3vw, 35px);
+    font-family: 'source sans pro light';
+}
+
+p {
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+/* NOTE MEDIA@ */
+
+
+/* Breakpoint	Condition
+Mobile (< 768px)	(max-width: 768px)
+Tablette (769–1023px)	(min-width: 769px) and (max-width: 1023px)
+Desktop (>= 1024px)	(min-width: 1024px) */
