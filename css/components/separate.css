@@ -2,4 +2,17 @@
   width: 50px;
   height: auto;
 }
+
+.separate div {
+  width: 80vw;
+  height: 2px;
+  background-color: black;
+  border-radius: 25%;
+}
+.separate {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+}
  
