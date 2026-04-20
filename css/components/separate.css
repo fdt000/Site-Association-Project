@@ -1,5 +1,5 @@
 .separate img {
-  width: 50px;
+  width: 25%;
   height: auto;
 }
 
@@ -9,10 +9,10 @@
   background-color: black;
   border-radius: 25%;
 }
+
 .separate {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-
+  margin: clamp(10px, 5vw, 50px);
 }
- 

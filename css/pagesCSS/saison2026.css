@@ -2,11 +2,13 @@
     margin-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    align-items: center;
 
     max-width: 1200px;
     margin: auto;
     padding: 60px 20px;
+
+    gap: clamp(20px, 9vw, 145px);
 }
 
 /* mobile */
@@ -15,7 +17,14 @@ passe l'un en dessous de l'autre */
 @media (max-width: 768px) {
     .saison2026-intro {
         grid-template-columns: 1fr;
+
     }
+}
+
+.saison2026-intro-affiche {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
 }
 
 .saison2026-intro img {
@@ -23,23 +32,35 @@ passe l'un en dessous de l'autre */
     height: auto;
 }
 
+@media (max-width: 768px) {
+    .saison2026-intro img {
+        width: 60%;
+        height: auto;
+    }
+}
+
 .saison2026-intro-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+    gap: clamp(0px, 2vw, 30px);
+    margin: 40px 30px;
 
     /* pour positionner correctement le texte verticale : 1*/
     position: relative;
 
 }
 
+
+
 .saison2026-intro-content-vertical {
     /* pour positionner correctement le texte verticale : 2 */
     /* utilisation de absolute pour layout global → mauvais
     absolute pour élément décoratif → parfait */
     position: absolute;
-    left: -40px;
-    top: 0;
+    left: clamp(-66px, -5vw, -38px);
+    top: 15px;
 
     writing-mode: vertical-rl;
     transform: rotate(180deg);
@@ -47,17 +68,53 @@ passe l'un en dessous de l'autre */
     letter-spacing: 2px;
 }
 
-/* mobile */
-@media (max-width: 768px) {
-    .vertical-text {
-        position: static;
-        writing-mode: horizontal-tb;
-        transform: none;
-    }
-}
 
 .saison2026-intro-content-textBlock {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+
+/* bloc 2 */
+
+.saison2026-prog {
+  margin: 0 20px;
+}
+
+
+.saison2026-prog-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 65px;
+}
+
+
+.saison2026-prog-content-left {
+    grid-column: 1 / 2;
+}
+
+.saison2026-prog-content-right {
+    grid-column: 2 / 2;
+}
+
+.saison2026-prog-content span {
+    display: grid;
+    grid-template-columns: 2 ;
+    grid-template-rows: 2;
+
+}
+
+.saison2026-prog-content span h4 {
+   grid-column: 1/2;
+   grid-row: 2/2;
+}
+
+.saison2026-prog-content span h5 {
+    grid-column: 2/2;
+}
+
+.saison2026-prog-content span p {
+    grid-column: 2/2;
 }
