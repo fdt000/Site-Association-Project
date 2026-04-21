@@ -22,15 +22,23 @@ h2 {
 
 h3 {
     font-size: clamp(18px, 2vw, 28px);
+    font-family: 'playfaire display';
 }
 
 h4 {
     font-size: clamp(16px, 2.5vw, 33px);
     font-family: 'source sans pro light';
+
+}
+
+h5 {
+    font-size: clamp(14px, 2vw, 24px);
+    font-family: 'Playfaire Display';
 }
 
 p {
     font-size: clamp(14px, 2vw, 24px);
+    font-family: 'Source Serif Pro Regular';
 }
 
 /* NOTE MEDIA@ */
