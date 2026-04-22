@@ -1,6 +1,9 @@
 .separate img {
+ position: absolute;
   width: 25%;
   height: auto;
+  bottom: -1px;
+  left: 82%;
 }
 
 .separate div {
@@ -11,6 +14,7 @@
 }
 
 .separate {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
