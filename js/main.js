@@ -5,7 +5,9 @@ function loadComponent(id, file, callback) {
         .then(response => response.text())
         .then(data => {
             document.getElementById(id).innerHTML = data;
+            loadNavBar("header-navBar");
             if (callback) callback();
+
         })
         .catch(error => console.error('Error loading component:', error));
 }
@@ -30,26 +32,29 @@ function loadNavBar(id) {
     fetch("../components/navBar.html")
         .then(res => res.text())
         .then(data => {
+
+            //injecter
             document.getElementById(id).innerHTML = data;
+
+            // ont selectionne les éléments du menu et le hamburger
+            const navMenu = document.querySelector('.nav-menu');
+            const hamburger = document.querySelector('.hamburger');
+
+            //evenement
+            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }));
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
         });
-} {
-    loadNavBar("navBar");
 }
 
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-
-});
-
-document.querySelectorAll('.nav-link').forEach(n => n.
-    addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    }));
 
 
 // logo
@@ -139,3 +144,6 @@ document.querySelectorAll('.presse-link').forEach(el => {
     const link = el.dataset.link;
     loadPresseLink(el, link,);
 });
+
+console.log("main.js chargé");
+console.log(document.getElementById("header"));
