@@ -41,6 +41,11 @@ p {
     font-family: 'Source Serif Pro Regular';
 }
 
+a {
+    font-size: clamp(12px, 2vw, 16px);
+    font-family: 'Roboto Mono';
+}
+
 /* NOTE MEDIA@ */
 
 

@@ -20,16 +20,6 @@
     height: 20vh;
 }
 
-.header.navBar {
-    height: 10vh;
-}
-
-.header .navBar a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 16px;
-}
-
 .light-column {
     position: absolute;
     width: 84.06px;
@@ -41,6 +31,6 @@
             rgba(244, 244, 244, 0) 23.08%,
             rgba(244, 244, 244, 0.41) 38.94%,
             rgba(244, 244, 244, 0.842047) 84.13%,
-            #F4F4F4 100%);
+            #FFFFFF 100%);
 
 }

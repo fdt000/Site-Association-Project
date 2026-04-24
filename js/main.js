@@ -23,6 +23,35 @@ loadComponent('footer', '../components/footer.html', () => {
     loadComponent("footer-social", "../components/socialMedia.html");
 });
 
+
+//Nav Bar
+
+function loadNavBar(id) {
+    fetch("../components/navBar.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById(id).innerHTML = data;
+        });
+} {
+    loadNavBar("navBar");
+}
+
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+
+});
+
+document.querySelectorAll('.nav-link').forEach(n => n.
+    addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }));
+
+
 // logo
 function loadLogo(id, options) {
     fetch("../components/logo.html")
