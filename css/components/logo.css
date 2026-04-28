@@ -1,5 +1,17 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .logo img {
-  width: 190px;
+  width: clamp(110px, 18vw, 190px);
   height: auto;
 }
- 
+
+
+.logo p {
+  font-size: clamp(5px, 0.9vw, 9px);
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}

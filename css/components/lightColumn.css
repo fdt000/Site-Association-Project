@@ -1,0 +1,13 @@
+ .light-column {
+     position: absolute;
+     width: 84.06px;
+     height: 610px;
+     left: 17.85%;
+     top: 1px;
+     background: linear-gradient(180deg,
+             rgba(244, 244, 244, 0) 0,
+             rgba(244, 244, 244, 0) 10.08%,
+             rgba(244, 244, 244, 0.41) 38.94%,
+             rgba(244, 244, 244, 0.842047) 84.13%,
+             #FFF 100%);
+ }

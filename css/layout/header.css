@@ -9,28 +9,40 @@
     background-position: center;
 }
 
-
-.header-container {
+.header-navBar {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 12vh
+}
+
+
+.header-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 20vh;
+    
+    
 }
 
 .header-logo {
-    height: 20vh;
+    position: relative;
+    height: 12vh;
+    display: flex;
+    justify-content: flex-start;
+    left: 3vw;
 }
 
-.light-column {
-    position: absolute;
-    width: 84.06px;
-    height: 550px;
-    left: 14.85%;
-    top: 1px;
 
-    background: linear-gradient(180deg, rgba(244, 244, 244, 0) 0%,
-            rgba(244, 244, 244, 0) 23.08%,
-            rgba(244, 244, 244, 0.41) 38.94%,
-            rgba(244, 244, 244, 0.842047) 84.13%,
-            #FFFFFF 100%);
 
+
+@media (max-width: 768px) {
+    .light-column {
+       display: none;
+
+    }
 }

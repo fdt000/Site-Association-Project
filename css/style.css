@@ -12,6 +12,8 @@
 @import url('./components/logo.css');
 @import url('./components/separate.css');
 @import url('./components/socialMedia.css');
+@import url('./components/lightColumn.css');
+
 
 /* Pages */
 @import url('./pagesCSS/home.css');

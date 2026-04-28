@@ -15,6 +15,7 @@ function loadComponent(id, file, callback) {
 loadComponent('header', '../components/header.html', () => {
     loadComponent("header-navBar", "../components/navBar.html");
     loadComponent("header-logo", "../components/logo.html");
+    loadComponent("light-column", "../components/lightColumn.html");
 });
 
 
@@ -53,6 +54,19 @@ function loadNavBar(id) {
 
         });
 }
+
+// LIGHT COLUMN
+function loadlightColumn(id) {
+    fetch("../components/lightColumn.html")
+        .then(res => res.text())
+        .then(data => {
+
+            //injecter
+            document.getElementById(id).innerHTML = data;
+        });
+}
+
+loadlightColumn("light-column");
 
 
 
