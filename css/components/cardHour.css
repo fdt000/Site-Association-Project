@@ -1,0 +1,39 @@
+.cardHour {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 20px 0 0;
+}
+
+.cardHour h3 {
+    font-size: clamp(9px, 2vw, 18px);
+    margin-top: 8px;
+}
+
+.cardHour p {
+    text-align: right;
+    font-size: clamp(7px, 2vw, 14px);
+}
+
+.cardHour div {
+    height: 0.5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25%;
+}
+
+.white-line1 {
+    width: clamp(20vw, 1.5vw, 23vw);
+    margin: 5px 0 5px 0;
+}
+
+.white-line2 {
+    width: clamp(20vw, 1.5vw, 23vw);
+    margin: 5px 0 5px 0;
+}
+
+.white-line3 {
+    width: clamp(18vw, 1.5vw, 14.5vw);
+    margin: 5px 0 5px 0;
+}
