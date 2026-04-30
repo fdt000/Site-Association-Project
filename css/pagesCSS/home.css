@@ -12,8 +12,31 @@
 }
 
 .socialMedia-title h2 {
-    font-size: 24px;
+    font-size: clamp(40px, 3.5vw, 60px);
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
+}
+
+.intro-aPropo-title p {
+    font-size: clamp(9px, 0.9vw, 18px);
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+.intro-aPropo {
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: ;
+}
+
+.intro-aPropo-content img {
+    width: 230px;
+    height: auto;
+}
+
+.intro-aPropo-content p {
+    font-size: clamp(14px, 2vw, 24px);
+    font-family: 'Playfaire Display';
+    font-style: italic;
 }
