@@ -1,30 +1,61 @@
-
-// compossant header & footer
-function loadComponent(id, file, callback) {
-    fetch(file)
-        .then(response => response.text())
+// header
+function loadHeader(id) {
+    fzetch("../components/header.html")
+        .then(res => res.text())
         .then(data => {
             document.getElementById(id).innerHTML = data;
-            loadNavBar("header-navBar");
-            if (callback) callback();
 
-        })
-        .catch(error => console.error('Error loading component:', error));
+            const page = document.body.className;
+            const header = document.querySelectorAll('header');
+
+            header.classList.add('header--' + page);
+        });
 }
 
-loadComponent('header', '../components/header.html', () => {
-    loadComponent("header-navBar", "../components/navBar.html");
-    loadComponent("header-logo", "../components/logo.html");
-    loadComponent("light-column", "../components/lightColumn.html");
-});
 
 
-loadComponent('footer', '../components/footer.html', () => {
-    loadComponent("footer-navBar", "../components/navBar.html");
-    loadComponent("footer-cardHour", "../components/cardHour.html");
-    loadComponent("footer-logo", "../components/logo.html");
-    loadComponent("footer-social", "../components/socialMedia.html");
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// compossant header & footer
+
+// function loadComponent(id, file, callback) {
+//     fetch(file)
+//         .then(response => response.text())
+//         .then(data => {
+//             document.getElementById(id).innerHTML = data;
+//             loadNavBar("header-navBar");
+//             if (callback) callback();
+
+//         })
+//         .catch(error => console.error('Error loading component:', error));
+// }
+
+// loadComponent('header', '../components/header.html', () => {
+//     loadComponent("header-navBar", "../components/navBar.html");
+//     loadComponent("header-logo", "../components/logo.html");
+//     loadComponent("light-column", "../components/lightColumn.html");
+// });
+
+
+// loadComponent('footer', '../components/footer.html', () => {
+//     loadComponent("footer-navBar", "../components/navBar.html");
+//     loadComponent("footer-cardHour", "../components/cardHour.html");
+//     loadComponent("footer-logo", "../components/logo.html");
+//     loadComponent("footer-social", "../components/socialMedia.html");
+// });
 
 
 //Nav Bar
