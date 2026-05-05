@@ -1,17 +1,18 @@
 // header
 function loadHeader(id) {
-    fzetch("../components/header.html")
+    fetch("../components/header.html")
         .then(res => res.text())
         .then(data => {
-            document.getElementById(id).innerHTML = data;
+            document.getElementById(id).innerHTML = data;  //injecter
 
-            const page = document.body.className;
-            const header = document.querySelectorAll('header');
+            const page = document.body.className;  //Récupérer, la classe du body pour savoir sur quelle page on est
+            const header = document.querySelector('header');  //Récupérer, le header
 
-            header.classList.add('header--' + page);
+            header.classList.add('header--' + page);  // adapter,  le header en fonction de la page
         });
 }
 
+loadHeader("header"); //appel 
 
 
 
@@ -27,35 +28,6 @@ function loadHeader(id) {
 
 
 
-
-
-// compossant header & footer
-
-// function loadComponent(id, file, callback) {
-//     fetch(file)
-//         .then(response => response.text())
-//         .then(data => {
-//             document.getElementById(id).innerHTML = data;
-//             loadNavBar("header-navBar");
-//             if (callback) callback();
-
-//         })
-//         .catch(error => console.error('Error loading component:', error));
-// }
-
-// loadComponent('header', '../components/header.html', () => {
-//     loadComponent("header-navBar", "../components/navBar.html");
-//     loadComponent("header-logo", "../components/logo.html");
-//     loadComponent("light-column", "../components/lightColumn.html");
-// });
-
-
-// loadComponent('footer', '../components/footer.html', () => {
-//     loadComponent("footer-navBar", "../components/navBar.html");
-//     loadComponent("footer-cardHour", "../components/cardHour.html");
-//     loadComponent("footer-logo", "../components/logo.html");
-//     loadComponent("footer-social", "../components/socialMedia.html");
-// });
 
 
 //Nav Bar
