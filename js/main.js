@@ -9,24 +9,19 @@ function loadHeader(id) {
             const header = document.querySelector('header');  //Récupérer, le header
 
             header.classList.add('header--' + page);  // adapter,  le header en fonction de la page
+
+
+            // Charger la Nav Bar dans le header
+            loadNavBar('header-navBar');
+            // Charger la light column dans le header
+            loadlightColumn('header-lightColumn');
+            // Charger le logo dans le header
+            loadLogo('header-logo', {
+                image: "../assets/logo.png"
+            });
         });
 }
-
 loadHeader("header"); //appel 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -66,6 +61,8 @@ function loadlightColumn(id) {
 
             //injecter
             document.getElementById(id).innerHTML = data;
+
+            const lightColumn = document.querySelector('.light-column');
         });
 }
 

@@ -1,7 +1,7 @@
  .light-column {
      position: absolute;
      width: 84.06px;
-     height: 610px;
+     height: 623px;
      left: 17.85%;
      top: 1px;
      background: linear-gradient(180deg,
@@ -11,3 +11,35 @@
              rgba(244, 244, 244, 0.842047) 84.13%,
              #FFF 100%);
  }
+
+ .header--saison2026 .light-column {
+     left: 30.77%;
+     top: 1px;
+
+ }
+
+ .header--home .light-column {
+     left: 17.85%;
+     top: 1px;
+ }
+
+ .header--effetMer .light-column {
+     left: 17.85%;
+     top: 1px;
+ }
+
+ .header--evnmt .light-column {
+     left: 17.85%;
+     top: 1px;
+ }
+
+ .header--contact .light-column {
+     left: 17.85%;
+     top: 1px;
+ }
+
+ .headeraPropos .light-column {
+     left: 17.85%;
+     top: 1px;
+ }
+ 
