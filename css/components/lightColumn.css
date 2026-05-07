@@ -13,10 +13,10 @@
  }
 
  .header--saison2026 .light-column {
-     left: 30.77%;
+     left: clamp(20.20%, 2vw, 30.77%);
      top: 1px;
-
  }
+
 
  .header--home .light-column {
      left: 17.85%;

@@ -23,6 +23,28 @@ function loadHeader(id) {
 }
 loadHeader("header"); //appel 
 
+// footer
+function loadFooter(id) {
+    fetch("../components/footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById(id).innerHTML = data;  //injecter
+
+            const page = document.body.className;  //Récupérer, la classe du body pour savoir sur quelle page on est
+            const footer = document.querySelector('footer');  //Récupérer, le footer
+
+            footer.classList.add('footer--' + page);  // adapter,  le footer en fonction de la page
+
+            loadNavBar('footer-navBar'); // Charger la Nav Bar dans le footer
+            loadSocialMedia('footer-socialMedia'); // Charger le bouton Facebook dans le footer
+            loadCardHour('footer-CardHour'); // Charger les horaires dans le footer
+            loadLogo('footer-logo', { // Charger le logo dans le footer
+                image: "../assets/logo.png"
+            });
+        })
+}
+loadFooter("footer"); //appel
+
 
 
 //Nav Bar
@@ -54,6 +76,8 @@ function loadNavBar(id) {
 }
 
 // LIGHT COLUMN
+//A mettre directement dans la nav bar et faire en sorte que la light column s'adapte a chauqe page (ex: light-column--home, light-column--contact, etc...)
+// a faire plus tard.
 function loadlightColumn(id) {
     fetch("../components/lightColumn.html")
         .then(res => res.text())
@@ -65,8 +89,6 @@ function loadlightColumn(id) {
             const lightColumn = document.querySelector('.light-column');
         });
 }
-
-loadlightColumn("light-column");
 
 
 
@@ -83,14 +105,10 @@ function loadLogo(id, options) {
         });
 }
 
-loadLogo("logo", {
-    image: ""
-});
-
 
 // btn
 function loadBtn(el, text, icon) {
-    fetch('/components/btn.html')
+    fetch('../components/btn.html')
         .then(response => response.text())
         .then(data => {
 
@@ -110,7 +128,7 @@ document.querySelectorAll('.btn').forEach(el => {
 
 // separate
 function loadSeparate(el, img) {
-    fetch("/components/separate.html")
+    fetch("../components/separate.html")
         .then(response => response.text())
         .then(data => {
 
@@ -126,25 +144,34 @@ document.querySelectorAll('.separate').forEach(el => {
 });
 
 // social media
-function loadSocialButton(id, platform, text, link) {
-    fetch("/components/button-social.html")
+function loadSocialMedia(id) {
+    fetch("../components/socialMedia.html")
         .then(res => res.text())
         .then(data => {
-            let html = data
-                .replace("{{platform}}", platform)
-                .replace("{{text}}", text)
-                .replace("{{link}}", link);
-
-            document.getElementById(id).innerHTML = html;
+            document.getElementById(id).innerHTML = data;
         });
 }
 
-loadComponent("page-social", "components/socialMedia.html");
+
+// card hours
+function loadCardHour(id) {
+    fetch("../components/cardHour.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById(id).innerHTML = data;
+
+            const cardHour = document.querySelector('.cardHour');
+        })
+}
+loadCardHour("cardHour");
+
+
+
 
 
 // presse
 function loadPresseLink(el, link,) {
-    fetch("/components/presse.html")
+    fetch("../components/presse.html")
         .then(res => res.text())
         .then(data => {
 
