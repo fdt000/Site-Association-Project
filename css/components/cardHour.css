@@ -37,3 +37,9 @@
     width: clamp(18vw, 1.5vw, 14.5vw);
     margin: 5px 0 5px 0;
 }
+
+.card-hour { }
+
+.card-hour--contact { }
+
+.card-hour--footer { }
