@@ -7,7 +7,7 @@ a {
     color: rgb(255, 255, 255);
 }
 
-.navBar {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,7 @@ a {
     padding: 0px 24px;
 }
 
-.nav-menu {
+.navbar-menu {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -23,31 +23,61 @@ a {
     gap: 60px;
 }
 
-.homeStay {
-    font-size: clamp(18px, 2vw, 28px);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+.navbar-menu-item {
+    margin: 16px 0;
 }
 
 
-.nav-link {
+/* light column sur lien actif */
+.navbar-menu-item-link.active {
+    position: relative;
+    z-index: 100;
+}
+
+/* .navbar-menu-item-link.active::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+
+    left: 50%;
+    transform: translateX(-50%);
+    width: 84.06px;
+    height: 100px;
+    top: 50;
+
+    background: linear-gradient(180deg,
+            rgba(244, 244, 244, 0) 0,
+            rgba(244, 244, 244, 0) 10.08%,
+            rgba(244, 244, 244, 0.41) 38.94%,
+            rgba(244, 244, 244, 0.842047) 84.13%,
+            #FFF 100%);
+} */
+
+
+
+/* effet hover */
+.navbar-menu-item-link {
+    display: inline-block; /*pour gérer le dispaly:inline par defaur pour balise <a>*/
+    position: relative; /*pour gérer position absolute de .navbar-....active*/
     transition: 0.7s ease;
 }
 
-.nav-link:hover {
+.navbar-menu-item-link:hover {
     color: rgb(153, 153, 153);
 }
 
-.hamberger {
+
+
+
+/* menu burger responsive*/
+.burger {
     display: none;
     cursor: pointer;
 }
 
-
-
 @media (max-width: 768px) {
-    .hamberger {
+    .burger {
         display: block;
     }
 
@@ -62,19 +92,19 @@ a {
         cursor: pointer;
     }
 
-    .hamberger.active .line:nth-child(2) {
+    .burger.active .line:nth-child(2) {
         opacity: 0;
     }
 
-    .hamberger.active .line:nth-child(1) {
+    .burger.active .line:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
 
-    .hamberger.active .line:nth-child(3) {
+    .burger.active .line:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .nav-menu {
+    .navbar-menu {
         position: fixed;
         left: -100%;
         top: 70px;
@@ -86,7 +116,7 @@ a {
         transition: 0.3s;
     }
 
-    .hamburger-light-column {
+    .burger-light-column {
         position: absolute;
         width: 84.06px;
         height: 503px;
@@ -99,12 +129,4 @@ a {
                 rgba(244, 244, 244, 0.842047) 84.13%,
                 #FFF 100%);
     }
-}
-
-.nav-item {
-    margin: 16px 0;
-}
-
-.nav-menu.active {
-    left: 0;
 }

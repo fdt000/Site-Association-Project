@@ -1,3 +1,5 @@
+const { useCallback } = require("react");
+
 // header
 function loadHeader(id) {
     fetch("../components/header.html")
@@ -13,8 +15,6 @@ function loadHeader(id) {
 
             // Charger la Nav Bar dans le header
             loadNavBar('header-navBar');
-            // Charger la light column dans le header
-            loadlightColumn('header-lightColumn');
             // Charger le logo dans le header
             loadLogo('header-logo', {
                 image: "../assets/logo.png"
@@ -48,7 +48,6 @@ loadFooter("footer"); //appel
 
 
 //Nav Bar
-
 function loadNavBar(id) {
     fetch("../components/navBar.html")
         .then(res => res.text())
@@ -58,35 +57,37 @@ function loadNavBar(id) {
             document.getElementById(id).innerHTML = data;
 
             // ont selectionne les éléments du menu et le hamburger
-            const navMenu = document.querySelector('.nav-menu');
-            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.navbar-menu');
+            const burger = document.querySelector('.navbar-burger');
+
+
+            //automatiser la recherche de la page actif pour light column 
+            // un système automatique de lien actif *
+            // récupère tous les liens *
+            const links = document.querySelectorAll('.navbar-menu-item-link');
+            //récupère les chemin de pages *
+            const currentPage = window.location.pathname;
+
+            //Parcourir les liens * 
+            links.forEach(link => {
+                if (link.href.includes(currentPage)) { //si currentPage .includes link.href
+                    link.classList.add('active'); // ajout d'une class active au lien 
+                }
+            });
 
             //evenement
-            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            }));
+            document.querySelectorAll('.navbar-menu-item-link')
+                .forEach(n => n.addEventListener('click', () => {
+                    burger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                })
+                );
 
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('active');
                 navMenu.classList.toggle('active');
             });
 
-        });
-}
-
-// LIGHT COLUMN
-//A mettre directement dans la nav bar et faire en sorte que la light column s'adapte a chaque page (ex: light-column--home, light-column--contact, etc...)
-// a faire plus tard.
-function loadlightColumn(id) {
-    fetch("../components/lightColumn.html")
-        .then(res => res.text())
-        .then(data => {
-
-            //injecter
-            document.getElementById(id).innerHTML = data;
-
-            const lightColumn = document.querySelector('.light-column');
         });
 }
 
@@ -219,5 +220,3 @@ document.querySelectorAll('.presse-link').forEach(el => {
     loadPresseLink(el, link,);
 });
 
-console.log("main.js chargé");
-console.log(document.getElementById("header"));
