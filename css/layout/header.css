@@ -4,17 +4,20 @@
     z-index: 10;
     height: 60vh;
 
+
+
     background-image: url(../img/img-galerie-header2.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.header-navBar {
+
+.header-navbar {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 12vh
+
 }
 
 
@@ -24,9 +27,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    bottom: 20vh;
-    
-    
+
+
+
 }
 
 .header-logo {
@@ -34,7 +37,7 @@
     height: 12vh;
     display: flex;
     justify-content: flex-start;
-    left: 3vw;
+
 }
 
 
@@ -42,9 +45,7 @@
 
 @media (max-width: 768px) {
     .light-column {
-       display: none;
+        display: none;
 
     }
 }
-
-

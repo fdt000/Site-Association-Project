@@ -1,5 +1,3 @@
-const { useCallback } = require("react");
-
 // header
 function loadHeader(id) {
     fetch("../components/header.html")
@@ -82,6 +80,7 @@ function loadNavBar(id) {
                     navMenu.classList.remove('active');
                 })
                 );
+
 
             burger.addEventListener('click', () => {
                 burger.classList.toggle('active');

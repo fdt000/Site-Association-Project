@@ -11,7 +11,7 @@
     box-shadow: à -10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.socialMedia-title h2 {
+.social-title h2 {
     font-size: clamp(40px, 3.5vw, 60px);
     margin-bottom: 20px;
     display: flex;
@@ -27,7 +27,6 @@
 .intro-aPropo {
     margin-top: 50px;
     display: grid;
-    grid-template-rows: ;
 }
 
 .intro-aPropo-content img {
