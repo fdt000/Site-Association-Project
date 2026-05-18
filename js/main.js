@@ -126,22 +126,32 @@ document.querySelectorAll('.btn').forEach(el => {
 });
 
 
+
 // separate
-function loadSeparate(el, img) {
+function loadSeparate(el, img, variant) {
     fetch("../components/separate.html")
         .then(response => response.text())
         .then(data => {
 
             let html = data.replace('{{img}}', img);
-
+               
             el.innerHTML = html;
+
+            //rendre css separate ajustable
+            //ont injecte une classe aprés le rendu
+            const separate = el.querySelector('.separate');
+
+            separate.classList.add('separate--' + variant);
         });
 }
-
 document.querySelectorAll('.separate').forEach(el => {
     const img = el.dataset.img;
-    loadSeparate(el, img);
+    const variant = el.dataset.variant;
+
+    loadSeparate(el, img, variant);
 });
+
+
 
 // social media
 function loadSocialMedia(id, variant, options) {
