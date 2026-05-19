@@ -13,7 +13,27 @@
 
 
 
+
+
+
+
+
+
 /* BLOC 1 INTRO */
+.intro-aPropo-title p {
+    font-size: clamp(9px, 1.1vw, 16px);
+    font-family: "Roboto Mono";
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+.intro-aPropo-content p {
+    font-size: clamp(14px, 2vw, 18px);
+    font-family: 'Playfaire Display';
+    font-style: italic;
+}
+
+
 /* grid */
 /* parent */
 .intro-aPropo {
@@ -98,6 +118,7 @@
         padding: 0 30px;
 
         display: flex;
+        flex-direction: column;
         justify-content: center;
         justify-content: flex-start;
         flex-wrap: wrap;
@@ -217,6 +238,9 @@
 .enCeMoment-content-texte {
     grid-column: 1 / 3;
     grid-row: 3 / 4;
+
+    position: relative;
+    bottom: 20px;
 }
 
 
@@ -233,73 +257,82 @@
 .intro-projetEvnmt {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 10vw 1fr 4vw 1fr 10vw;
+    grid-template-rows: 10vh 35vh 11vh 50vh;
 }
 
 .intro-projetEvnmt-title {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
+/* effet mer */
 .intro-projetEvnmt-effetMer {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+    grid-row: 3 / 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: inherit;
+
+    border: solid;
 }
 
+.intro-projetEvnmt-effetMer h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 20px;
+}
+
+
+/* nos Evnmt */
+.intro-projetEvnmt-nosEvnmt {
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: inherit;
+
+    border: solid;
+}
+
+.intro-projetEvnmt-nosEvnmt h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 20px;
+}
+
+
+
+/* texte des cards et btn*/
 .texte-bold {
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.intro-projetEvnmt-nosEvnmt {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-}
-
-
-
-
-
-
-/* composant ajustable pour pages */
-.separate--bloc2 img {
-    position: absolute;
-    width: 18%;
-    height: auto;
-    bottom: -1px;
-    left: -5%;
-    transform: scaleX(-1);
-}
-
-.separate--bloc3 img {
-    position: absolute;
-    width: 22%;
-    height: auto;
-    bottom: -1px;
-    left: 65%;
-    transform: scaleX(-1);
-}
-
-
-.separate-bis {
-    position: relative;
-    width: 17%;
-    height: auto;
-    left: 955px;
-    top: 117px;
-}
-
-
-/* .intro-aPropo-content .btn {} */
-.intro-aPropo-content p {
-    font-size: clamp(14px, 2vw, 18px);
-    font-family: 'Playfaire Display';
-    font-style: italic;
+.texte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
-/*  */
 
 
 
@@ -307,16 +340,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* BLOC 4 Social Media*/
 .social-title h2 {
     font-size: clamp(40px, 3.5vw, 70px);
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-}
-
-.intro-aPropo-title p {
-    font-size: clamp(9px, 1.1vw, 16px);
-    font-family: "Roboto Mono";
-    text-transform: uppercase;
-    font-weight: 200;
 }

@@ -2,15 +2,63 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
-    background-color: #44444484;
+    padding: 10px 0px;
+    background: none;
     color: #000000;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-family: "Roboto Mono";
+    font-size: clamp(10px, 2vw, 16px);
 }
 
-body .btn {
-    font-family: 'Roboto Mono', monospace;
-    color: black;
+
+
+
+/* BTN HOME.HTML */
+/* INTRO BLOC1 */
+.btn--bloc1-aPropo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-container--bloc1-aPropo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+/* EN CE MOMENT BLOC2 */
+.btn--bloc2-saison2026 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-container--bloc2-saison2026 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+/* EFFET MER & EVNMT BLOC3*/
+.btn--bloc3-nosEvnmt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-container--bloc3-nosEvnmt {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.btn--bloc3-effetMer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-container--bloc3-effetMer {
+    display: flex;
+    justify-content: flex-end;
+
 }

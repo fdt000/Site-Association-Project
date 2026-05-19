@@ -107,22 +107,35 @@ function loadLogo(id, options) {
 
 
 // btn
-function loadBtn(el, text, icon) {
+function loadBtn(el, text, icon, variant) {
     fetch('../components/btn.html')
         .then(response => response.text())
         .then(data => {
 
-            let html = data.replace('{{texte}}', text)
+            let html = data
+                .replace('{{text}}', text)
                 .replace('{{icon}}', icon);
 
             el.innerHTML = html;
+
+            //rendre css separate ajustable
+            //ont injecte une classe aprés le rendu
+            const btn = el.querySelector('.btn');
+              
+            btn.classList.add('btn--' + variant);
+
+            //container du btn
+            el.classList.add('btn-container--' + variant)
+
         });
 }
 
-document.querySelectorAll('.btn').forEach(el => {
+document.querySelectorAll('.btn-container').forEach(el => {
     const text = el.dataset.text;
     const icon = el.dataset.icon;
-    loadBtn(el, text, icon);
+    const variant = el.dataset.variant;
+
+    loadBtn(el, text, icon, variant);
 });
 
 
@@ -134,7 +147,7 @@ function loadSeparate(el, img, variant) {
         .then(data => {
 
             let html = data.replace('{{img}}', img);
-               
+
             el.innerHTML = html;
 
             //rendre css separate ajustable
