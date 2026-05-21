@@ -107,21 +107,22 @@ function loadLogo(id, options) {
 
 
 // btn
-function loadBtn(el, text, icon, variant) {
+function loadBtn(el, text, icon, link, variant) {
     fetch('../components/btn.html')
         .then(response => response.text())
         .then(data => {
 
             let html = data
                 .replace('{{text}}', text)
-                .replace('{{icon}}', icon);
+                .replace('{{icon}}', icon)
+                .replace('{{link}}', link);
 
             el.innerHTML = html;
 
             //rendre css separate ajustable
             //ont injecte une classe aprés le rendu
             const btn = el.querySelector('.btn');
-              
+
             btn.classList.add('btn--' + variant);
 
             //container du btn
@@ -133,9 +134,10 @@ function loadBtn(el, text, icon, variant) {
 document.querySelectorAll('.btn-container').forEach(el => {
     const text = el.dataset.text;
     const icon = el.dataset.icon;
+    const link = el.dataset.link;
     const variant = el.dataset.variant;
 
-    loadBtn(el, text, icon, variant);
+    loadBtn(el, text, icon, link, variant);
 });
 
 
@@ -177,7 +179,7 @@ function loadSocialMedia(id, variant, options) {
             let html = data
                 .replace('{{facebook}}', options.facebook)
                 .replace('{{insta}}', options.insta)
-                .replace('{{tiktok}}', options.tiktok)
+                // .replace('{{tiktok}}', options.tiktok)
 
             document.getElementById(id).innerHTML = html //inject composant
 
@@ -191,16 +193,16 @@ function loadSocialMedia(id, variant, options) {
 }
 //Appels composants dans home
 loadSocialMedia("home-socialMedia", "home", {
-    facebook: "../assets/icon/facebook.png",
-    insta: "../assets/icon/instagram.png",
-    tiktok: "../assets/icon/tiktok.png"
+    facebook: "./css/img/logo-instagrame.png",
+    insta: "./css/img/logo-instagrame.png",
+    // tiktok: "../assets/icon/tiktok.png"
 });
 
 //Appels  // // Footer
 loadSocialMedia("footer-socialMedia", "footer", {
     facebook: "../assets/icon/facebook-white.png",
     insta: "../assets/icon/instagram-white.png",
-    tiktok: "../assets/icon/tiktok-white.png"
+    // tiktok: "../assets/icon/tiktok-white.png"
 });
 
 
