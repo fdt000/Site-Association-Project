@@ -193,8 +193,8 @@ function loadSocialMedia(id, variant, options) {
 }
 //Appels composants dans home
 loadSocialMedia("home-socialMedia", "home", {
-    facebook: "./css/img/logo-instagrame.png",
-    insta: "./css/img/logo-instagrame.png",
+    facebook: "./css/img/Logo-facebook-ILST.png",
+    insta: "./css/img/Logo-Insta-ILST.png",
     // tiktok: "../assets/icon/tiktok.png"
 });
 
