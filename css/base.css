@@ -42,7 +42,7 @@ h5 {
 }
 
 p {
-    font-size: clamp(14px, 2vw, 20px);
+    font-size: clamp(13px, 2vw, 20px);
     font-family: 'Source Serif Pro Regular';
 }
 

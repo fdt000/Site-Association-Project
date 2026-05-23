@@ -53,7 +53,7 @@
     display: flex;
     justify-content: flex-end;
 
-    padding: 57px 75px 0 75px;
+    padding: 15px 75px;
 }
 
 .btn--bloc3-effetMer {
@@ -66,5 +66,5 @@
     display: flex;
     justify-content: flex-end;
 
-    padding: 57px 75px 0 75px;
+    padding: 15px 75px;
 }

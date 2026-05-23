@@ -34,7 +34,7 @@ function loadFooter(id) {
             footer.classList.add('footer--' + page);  // adapter,  le footer en fonction de la page
 
             loadNavBar('footer-navBar'); // Charger la Nav Bar dans le footer
-            loadSocialMedia("footer-socialMedia", "footer"); // Charger le bouton Facebook dans le footer
+            loadSocialMedia("footer-socialMedia", "footer"); // Charger le bouton Facebook/INSTA dans le footer
             loadCardHour("footer-cardHour", "footer"); // Charger les horaires dans le footer
             loadLogo('footer-logo', { // Charger le logo dans le footer
                 image: "../assets/logo.png"
@@ -169,7 +169,7 @@ document.querySelectorAll('.separate').forEach(el => {
 
 
 // social media
-function loadSocialMedia(id, variant, options) {
+function loadSocialMedia(id, variant, options = {}) { //options = {} pour rendre les options facultatives, si pas d'options on met un objet vide par défaut ligne erreur
     fetch("../components/socialMedia.html")
         .then(res => res.text())
         .then(data => {
@@ -179,13 +179,12 @@ function loadSocialMedia(id, variant, options) {
             let html = data
                 .replace('{{facebook}}', options.facebook)
                 .replace('{{insta}}', options.insta)
-                // .replace('{{tiktok}}', options.tiktok)
-
+                
             document.getElementById(id).innerHTML = html //inject composant
 
             const container = document.getElementById(id); //récupère dans le document par l'id donc le container
 
-            const socialMedia = container.querySelector('social-media'); // récupère composant injecté
+            const socialMedia = container.querySelector('.social-media'); // récupère composant injecté
 
             socialMedia.classList.add("social-media--" + variant); //ont ajoute au nom de class social-media un variant selon le context
 
@@ -200,8 +199,8 @@ loadSocialMedia("home-socialMedia", "home", {
 
 //Appels  // // Footer
 loadSocialMedia("footer-socialMedia", "footer", {
-    facebook: "../assets/icon/facebook-white.png",
-    insta: "../assets/icon/instagram-white.png",
+    facebook: "./css/img/Logo-facebook-ILST.png",
+    insta: "./css/img/Logo-Insta-ILST.png",
     // tiktok: "../assets/icon/tiktok-white.png"
 });
 
@@ -212,9 +211,13 @@ function loadCardHour(id, variant) {
     fetch("../components/cardHour.html")
         .then(res => res.text())
         .then(data => {
-            document.getElementById(id).innerHTML = data; // injecte
+            // document.getElementById(id).innerHTML = data; // injecte //enlever apres correction a revoir l'erreur
 
             const container = document.getElementById(id); //récupère
+
+            //ligne ajouter correction erreur
+            if (!container) return; //si pas de container on sort de la fonction
+            container.innerHTML = data; // injecte
 
             const cardHour = container.querySelector('.card-hour'); //récupère
 
