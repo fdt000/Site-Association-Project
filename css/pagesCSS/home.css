@@ -258,7 +258,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 10vw 1fr 4vw 1fr 10vw;
-    grid-template-rows: 0vh 49vh 11vh 71vh;
+    grid-template-rows: 0vh 41vh 11vh 50vh;
 }
 
 @media (max-width: 768px) {
@@ -424,23 +424,6 @@
         padding: 10px 5px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

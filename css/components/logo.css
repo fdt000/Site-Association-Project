@@ -5,13 +5,13 @@
 }
 
 .logo img {
-  width: clamp(110px, 18vw, 190px);
+  width: clamp(170px, 21vw, 300px);
   height: auto;
 }
 
 
 .logo p {
-  font-size: clamp(5px, 0.9vw, 9px);
+  font-size: clamp(8px, 0.9vw, 14px);
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
 }

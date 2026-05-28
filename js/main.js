@@ -12,7 +12,7 @@ function loadHeader(id) {
 
 
             // Charger la Nav Bar dans le header
-            loadNavBar('header-navBar');
+            loadNavBar('header-navBar','header');
             // Charger le logo dans le header
             loadLogo('header-logo', {
                 image: "../assets/logo.png"
@@ -33,8 +33,11 @@ function loadFooter(id) {
 
             footer.classList.add('footer--' + page);  // adapter,  le footer en fonction de la page
 
-            loadNavBar('footer-navBar'); // Charger la Nav Bar dans le footer
-            loadSocialMedia("footer-socialMedia", "footer"); // Charger le bouton Facebook/INSTA dans le footer
+            loadNavBar('footer-navBar', 'footer'); // Charger la Nav Bar dans le footer
+            loadSocialMedia("footer-socialMedia", "footer", { // Charger le bouton Facebook/INSTA dans le footer
+                facebook: "/css/img/Logo-facebook-ILST.png",
+                insta: "/css/img/Logo-Insta-ILST.png"
+            });
             loadCardHour("footer-cardHour", "footer"); // Charger les horaires dans le footer
             loadLogo('footer-logo', { // Charger le logo dans le footer
                 image: "../assets/logo.png"
@@ -46,7 +49,7 @@ loadFooter("footer"); //appel
 
 
 //Nav Bar
-function loadNavBar(id) {
+function loadNavBar(id, variant) {
     fetch("../components/navBar.html")
         .then(res => res.text())
         .then(data => {
@@ -54,10 +57,15 @@ function loadNavBar(id) {
             //injecter
             document.getElementById(id).innerHTML = data;
 
+            //récupère dans le document par l'id le container
+            const container = document.getElementById(id);
             // ont selectionne les éléments du menu et le hamburger
-            const navMenu = document.querySelector('.navbar-menu');
-            const burger = document.querySelector('.navbar-burger');
+            const navbar = container.querySelector('.navbar');
+            const navMenu = container.querySelector('.navbar-menu');
+            const burger = container.querySelector('.navbar-burger');
 
+            //ont ajoute au nom de class navbar-- un variant selon le context
+            navbar.classList.add("navbar--" + variant);
 
             //automatiser la recherche de la page actif pour light column 
             // un système automatique de lien actif *
@@ -86,7 +94,6 @@ function loadNavBar(id) {
                 burger.classList.toggle('active');
                 navMenu.classList.toggle('active');
             });
-
         });
 }
 
@@ -173,13 +180,12 @@ function loadSocialMedia(id, variant, options = {}) { //options = {} pour rendre
     fetch("../components/socialMedia.html")
         .then(res => res.text())
         .then(data => {
-            document.getElementById(id).innerHTML = data;
 
             //remplace variable du html
             let html = data
                 .replace('{{facebook}}', options.facebook)
                 .replace('{{insta}}', options.insta)
-                
+
             document.getElementById(id).innerHTML = html //inject composant
 
             const container = document.getElementById(id); //récupère dans le document par l'id donc le container
@@ -194,14 +200,12 @@ function loadSocialMedia(id, variant, options = {}) { //options = {} pour rendre
 loadSocialMedia("home-socialMedia", "home", {
     facebook: "./css/img/Logo-facebook-ILST.png",
     insta: "./css/img/Logo-Insta-ILST.png",
-    // tiktok: "../assets/icon/tiktok.png"
 });
 
 //Appels  // // Footer
 loadSocialMedia("footer-socialMedia", "footer", {
-    facebook: "./css/img/Logo-facebook-ILST.png",
-    insta: "./css/img/Logo-Insta-ILST.png",
-    // tiktok: "../assets/icon/tiktok-white.png"
+    facebook: "/css/img/Logo-facebook-ILST.png",
+    insta: "/css/img/Logo-Insta-ILST.png",
 });
 
 

@@ -1,45 +1,35 @@
-.cardHour {
+.card-hour {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    margin: 0 20px 0 0;
 }
 
-.cardHour h3 {
-    font-size: clamp(9px, 2vw, 18px);
+.card-hour h3 {
+    font-size: clamp(8px, 2vw, 16px);
     margin-top: 8px;
 }
 
-.cardHour p {
+.card-hour p {
     text-align: right;
-    font-size: clamp(7px, 2vw, 14px);
+    font-size: clamp(6px, 2vw, 14px);
+    margin-top: 10px;
+    color: rgb(255, 243, 243);
 }
 
-.cardHour div {
-    height: 0.5px;
-    background-color: rgb(255, 255, 255);
+.white-line {
+    width: auto;
+    height: 1px;
+    background-color: rgb(255, 243, 243);
     border-radius: 25%;
+
+    width: clamp(17vw, 4vw, 14vw);
+    margin: 10px 0 10px 0;
 }
 
-.white-line1 {
-    width: clamp(20vw, 1.5vw, 23vw);
-    margin: 5px 0 5px 0;
-}
 
-.white-line2 {
-    width: clamp(20vw, 1.5vw, 23vw);
-    margin: 5px 0 5px 0;
-}
 
-.white-line3 {
-    width: clamp(18vw, 1.5vw, 14.5vw);
-    margin: 5px 0 5px 0;
-}
+.card-hour--contact {}
 
-.card-hour { }
-
-.card-hour--contact { }
-
-.card-hour--footer { }
+.card-hour--footer {}

@@ -1,15 +1,22 @@
-.social-media--footer {
-    color: rgb(0, 0, 0);
-}
-
-.social-media--home img{
+/* HOME */
+.social-media--home img {
     width: 30px;
     height: 30px;
 }
 
 .social-media img {
-    width: 70px;
+    width: clamp(35px, 7vw, 80px);
     height: auto;
 }
 
-/* HOME */
+
+
+/* FOOTER */
+.social-media--footer {
+    color: rgb(0, 0, 0);
+}
+
+.footer-social p {
+    font-size: clamp(4px, 1vw, 8px);
+    color: rgb(123, 122, 122);
+}
