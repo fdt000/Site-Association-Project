@@ -1,3 +1,10 @@
+.card-hour-container {
+    display: flex;
+    position: relative;
+    margin-top: 40px;
+}
+
+
 .card-hour {
     position: relative;
     display: flex;
@@ -7,13 +14,13 @@
 }
 
 .card-hour h3 {
-    font-size: clamp(8px, 2vw, 16px);
+    font-size: clamp(8px, 1.5vw, 16px);
     margin-top: 8px;
 }
 
 .card-hour p {
     text-align: right;
-    font-size: clamp(6px, 2vw, 14px);
+    font-size: clamp(6px, 1.5vw, 14px);
     margin-top: 10px;
     color: rgb(255, 243, 243);
 }
@@ -28,8 +35,15 @@
     margin: 10px 0 10px 0;
 }
 
+@media (max-width: 668px) {
+    .card-hour--footer {
+        display: none;
+    }
+}
+
+
 
 
 .card-hour--contact {}
 
-.card-hour--footer {}
+

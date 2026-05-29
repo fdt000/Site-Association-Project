@@ -13,7 +13,16 @@
 
 /* FOOTER */
 .social-media--footer {
-    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+    .social-media--footer {
+        justify-content: flex-start;
+        margin-left: 10px;
+    }
 }
 
 .footer-social p {

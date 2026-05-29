@@ -2,11 +2,13 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    height: 60vh;
+    height: 70vh;
 
-    background-image: url(../img/img-galerie-header2.jpg);
+    /* background-image: url(../img/img-galerie-header2.jpg); */
+    background-image: url(../img/img-galerie-header2-luminositée.jpg);
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 
@@ -14,18 +16,13 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    top: 48px;
-
+    align-items: flex-end;
+    height: 15vh;
 }
 
 
 .header-container {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .header-logo {
@@ -33,4 +30,5 @@
     display: flex;
     justify-content: flex-start;
     padding: 25px 0 0 25px;
+    display: inline-block;
 }
