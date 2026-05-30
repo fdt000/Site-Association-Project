@@ -4,15 +4,27 @@
   align-items: center;
 }
 
-.logo img {
-  width: clamp(120px, 21vw, 300px);
+
+/* HEADER */
+.header-logo img {
+  width: clamp(130px, 15vw, 200px);
   height: auto;
 }
 
-
-.logo p {
-  font-size: clamp(6px, 0.9vw, 14px);
+.header-logo p {
+  font-size: clamp(6px, 0.7vw, 9px);
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
 }
 
+
+/* FOOTER */
+#footer-logo img {
+  width: clamp(175px, 21vw, 300px);
+  height: auto;
+}
+#footer-logo p {
+  font-size: clamp(8px, 0.9vw, 14px);
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}

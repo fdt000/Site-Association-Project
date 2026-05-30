@@ -88,6 +88,9 @@ a {
 }
 
 @media (max-width: 768px) {
+    .header-navbar a {
+    font-size: clamp(13px, 2vw, 16px);
+}
 
     .navbar--header .navbar-burger {
         display: block;
@@ -119,11 +122,11 @@ a {
     }
 
     .navbar--header .navbar-menu {
-        position: fixed;
-        top: 0;
+        position: absolute;
+        top: -80px;
         left: 0;
         width: 100%;
-        height: 70vh;
+        height: 75vh;
 
         display: flex;
         flex-direction: column;
@@ -162,6 +165,13 @@ a {
                 rgba(244, 244, 244, 0.842047) 84.13%,
                 #FFF 100%);
     }
+
+    .navbar--header
+    .navbar-burger.active
+    .navbar-burger-light-column {
+        transition: all 0.3s ease;
+        opacity: 20%;
+    } 
 
     .navbar--header .navbar-menu-item-link.active::after {
         display: none;
@@ -206,13 +216,13 @@ a {
 
 .navbar--footer .navbar-menu {
     position: absolute;
-    top: 90%;
+    top: 45%;
     right: 0;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 22px;
+    gap: 21px;
 
     opacity: 0;
     visibility: hidden;
@@ -240,4 +250,6 @@ a {
 
 .navbar--footer .navbar-menu-item {
     margin: 6px 0;
+    position: relative;
+    top: 35px;
 }

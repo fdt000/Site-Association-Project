@@ -1,24 +1,3 @@
-/* effet de recouvrement */
-/*.main {
-     margin-top: -120px;
-    position: relative;
-    z-index: 20;
-
-    background: white;
-    border-radius: 20px 20px 0 0;
-    padding: 30px;
-
-    box-shadow: à -10px 10px 20px rgba(0, 0, 0, 0.2);
-} */
-
-
-
-
-
-
-
-
-
 /* BLOC 1 INTRO */
 .intro-aPropo-title p {
     font-size: clamp(9px, 1.1vw, 16px);
@@ -157,17 +136,13 @@
     grid-row: 2;
 }
 
-
 @media (max-width: 668px) {
     .enCeMonent {
         position: relative;
         display: grid;
         grid-template-columns: 2fr 3fr 1fr;
         grid-template-rows: 1fr 65px 1fr;
-        column-gap: 30px;
-
-        margin-right: clamp(55px, 13vw, 180px);
-        margin-left: clamp(44px, 2vw, 200px);
+        margin: clamp(44px, 2vw, 200px);
     }
 
     .enCeMoment-affiche {
@@ -216,13 +191,13 @@
     transform: rotate(-0.25turn);
     position: relative;
     display: flex;
-    font-size: clamp(26px, 2.5vw, 26px);
+    font-size: clamp(24px, 2.5vw, 28px);
     height: 300px;
     width: max-content;
     flex-direction: column;
-    bottom: clamp(15px, 5vw, 30px);
-    left: clamp(10px, 2vw, 0px);
-    margin: -3%;
+    bottom: clamp(45px, 10vw, 40px);
+    left: clamp(20px, 2vw, 0px);
+    margin: -5%;
 }
 
 .enCeMoment-content-artiste {
@@ -290,9 +265,9 @@
         grid-column: 3 / 5;
         grid-row: 2 / 5;
         border: solid;
+        border-width: 2px;
     }
 }
-
 
 .intro-projetEvnmt-title {
     display: flex;
@@ -337,6 +312,7 @@
     align-items: inherit;
 
     border: solid;
+    border-width: 2px;
 }
 
 @media (max-width: 668px) {
@@ -375,6 +351,7 @@
     align-items: inherit;
 
     border: solid;
+    border-width: 2px;
 }
 
 @media (max-width: 668px) {
@@ -445,6 +422,7 @@
     grid-template-columns: 1fr 8vw 26vw 8vw 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 
+    margin-top: 100px;
     margin: clamp(10px, 5vw, 65px);
 }
 

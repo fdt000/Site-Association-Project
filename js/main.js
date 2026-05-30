@@ -35,8 +35,8 @@ function loadFooter(id) {
 
             loadNavBar('footer-navBar', 'footer'); // Charger la Nav Bar dans le footer
             loadSocialMedia("footer-socialMedia", "footer", { // Charger le bouton Facebook/INSTA dans le footer
-                facebook: "/css/img/Logo-facebook-ILST.png",
-                insta: "/css/img/Logo-Insta-ILST.png"
+                facebook: "/css/img/logo-facebook-blanc.png",
+                insta: "/css/img/logo-insta-blanc.png"
             });
             loadCardHour("footer-cardHour", "footer"); // Charger les horaires dans le footer
             loadLogo('footer-logo', { // Charger le logo dans le footer
@@ -204,8 +204,8 @@ loadSocialMedia("home-socialMedia", "home", {
 
 //Appels  // // Footer
 loadSocialMedia("footer-socialMedia", "footer", {
-    facebook: "/css/img/Logo-facebook-ILST.png",
-    insta: "/css/img/Logo-Insta-ILST.png",
+    facebook: "/css/img/logo-facebook-blanc.png",
+    insta: "/css/img/logo-insta-blanc.png",
 });
 
 
