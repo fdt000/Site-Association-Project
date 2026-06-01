@@ -4,7 +4,6 @@
     padding: 15px 20px;
 }
 
-
 .card-hour {
     position: relative;
     display: flex;
@@ -43,5 +42,46 @@
 
 
 
+/* PAGES CONTACT */
+.card-hour--contact .white-line {
+    position: relative;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25%;
+    width: clamp(35vw, 17vw, 80);
+    margin: 10px 0 20px 0;
+}
 
-.card-hour--contact {}
+.card-hour--contact .white-line-circle {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    top: -6px;
+    left: -3px;
+}
+
+.card-hour--contact h3 {
+    color: rgb(0, 0, 0);
+    font-size: clamp(8px, 2vw, 24px);
+    text-transform: uppercase;
+    font-weight: 400;
+    left: 10%;
+    position: relative;
+    margin-top: 85px;
+}
+
+.card-hour--contact p {
+    color: rgb(0, 0, 0);
+    font-size: clamp(6px, 1.5vw, 14px);
+    margin-left: 30px;
+    text-align: left;
+}
+
+.card-hour--contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

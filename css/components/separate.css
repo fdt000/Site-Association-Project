@@ -105,3 +105,12 @@
     right: 46%;
   }
 }
+
+/* PAGE CONTACT */
+.separate--contate img {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  bottom: -1px;
+  left: -5%;
+}

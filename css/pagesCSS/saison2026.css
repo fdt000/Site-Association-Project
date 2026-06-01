@@ -1,6 +1,3 @@
-
-
-
 .saison2026-intro {
     margin-top: 100px;
     display: grid;
@@ -14,13 +11,10 @@
     gap: clamp(20px, 9vw, 145px);
 }
 
-/* mobile */
-/* quand ont passe en mobile ont met sur une coln les bloc img et text,
-passe l'un en dessous de l'autre */
+/* MOBILE */
 @media (max-width: 768px) {
     .saison2026-intro {
         grid-template-columns: 1fr;
-
     }
 }
 
@@ -33,6 +27,7 @@ passe l'un en dessous de l'autre */
 .saison2026-intro img {
     width: 100%;
     height: auto;
+    border-radius: 30px;
 }
 
 @media (max-width: 768px) {
@@ -50,17 +45,12 @@ passe l'un en dessous de l'autre */
     gap: clamp(0px, 2vw, 30px);
     margin: 40px 30px;
 
-    /* pour positionner correctement le texte verticale : 1*/
     position: relative;
-
 }
 
 
 
 .saison2026-intro-content-vertical {
-    /* pour positionner correctement le texte verticale : 2 */
-    /* utilisation de absolute pour layout global → mauvais
-    absolute pour élément décoratif → parfait */
     position: absolute;
     left: clamp(-66px, -5vw, -38px);
     top: 15px;
@@ -71,12 +61,16 @@ passe l'un en dessous de l'autre */
     letter-spacing: 2px;
 }
 
-
 .saison2026-intro-content-textBlock {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
+/*  */
+
+
+
 
 
 /* One week One exhibition */
@@ -91,15 +85,12 @@ passe l'un en dessous de l'autre */
     grid-template-columns: 1fr 1fr;
     column-gap: 65px;
     row-gap: clamp(20px, 5vw, 40px);
-
     margin: 0 20px;
-
 }
 
 @media (max-width: 768px) {
     .saison2026-prog-content {
         grid-template-columns: 1fr;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -110,8 +101,6 @@ passe l'un en dessous de l'autre */
 
 .saison2026-prog-title {
     grid-column: 1/3;
-    background-color: antiquewhite;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,13 +113,15 @@ passe l'un en dessous de l'autre */
     }
 }
 
+
+/* LEFT */
 .saison2026-prog-content-left {
     display: grid;
     grid-column: 1 / 2;
     gap: 35px;
 }
 
-
+/* RIGHT */
 .saison2026-prog-content-right {
     display: grid;
     grid-column: 2 / 2;
@@ -154,6 +145,9 @@ passe l'un en dessous de l'autre */
     grid-template-columns: 1fr 2fr;
     grid-row-gap: 0.1em;
     grid-auto-rows: auto;
+
+    border-radius: 30px;
+    padding: 10px;
 }
 
 @media (max-width: 768px) {
@@ -162,6 +156,24 @@ passe l'un en dessous de l'autre */
         grid-row-gap: 0.5em;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .saison2026-prog-content span h4 {
     grid-column: 1;
@@ -174,14 +186,10 @@ passe l'un en dessous de l'autre */
     font-size: clamp(20px, 2vw, 35px);
 }
 
-
-
 .saison2026-prog-content span h5 {
     grid-column: 2;
     grid-row: 1;
-
     font-size: clamp(16px, 2vw, 24px);
-
 }
 
 .saison2026-prog-content span p {
@@ -189,6 +197,4 @@ passe l'un en dessous de l'autre */
     grid-row: 2;
     font-weight: normal;
     font-size: clamp(14px, 2vw, 16px);
-
-
 }

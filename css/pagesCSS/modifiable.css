@@ -1,0 +1,13 @@
+/* A MODIFIER REGULIEREMENT */
+/* PAGE : SAISON 2026 */
+/* MODIFIER LES CLASSE DANS LE HTML SAISON 2026 */
+/* expo-finish : passer le background en grid */
+/* en-cours : ajouter un bord coloré */
+.expo-finish {
+    background-color: #c9c9c9;
+}
+
+.en-cours {
+    background-color: none;
+    border: solid 2px #f0a869;
+}

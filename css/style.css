@@ -21,6 +21,7 @@
 @import url('./pagesCSS/evnmt.css');
 @import url('./pagesCSS/aPropos.css');
 @import url('./pagesCSS/contact.css');
+@import url('./pagesCSS/modifiable.css');
 
 /* fonts */
 @font-face {
