@@ -26,7 +26,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin: clamp(10px, 5vw, 65px);
+  margin:
+    clamp(10px, 5vw, 100px) clamp(10px, 10vw, 142px)
 }
 
 
@@ -56,7 +57,7 @@
   height: auto;
   bottom: -14px;
   left: 61%;
-} 
+}
 
 @media (max-width: 1178px) {
   .separate--bloc3 img {
@@ -91,10 +92,10 @@
 
 .separate-social-2-img {
   position: absolute;
-  width: 48%;
+  width: 75%;
   height: auto;
   bottom: -1px;
-  right: 72%;
+  right: 56%;
 }
 
 @media (max-width: 668px) {

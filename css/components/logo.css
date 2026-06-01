@@ -12,7 +12,7 @@
 }
 
 .header-logo p {
-  font-size: clamp(6px, 0.7vw, 9px);
+  font-size: clamp(3px, 0.4vw, 8px);
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
 }
@@ -23,8 +23,10 @@
   width: clamp(175px, 21vw, 300px);
   height: auto;
 }
+
 #footer-logo p {
-  font-size: clamp(8px, 0.9vw, 14px);
+  font-size: clamp(5px, 0.7vw, 12px);
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }

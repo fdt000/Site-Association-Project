@@ -49,6 +49,7 @@ p {
 a {
     font-size: clamp(12px, 2vw, 16px);
     font-family: 'Roboto Mono';
+    letter-spacing: 2px;
 }
 
 /* NOTE MEDIA@ */

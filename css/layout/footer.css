@@ -1,4 +1,4 @@
-footer {
+.footer {
   padding: 10px;
   margin-top: 100px;
   background-color: #1B1613;
@@ -12,6 +12,10 @@ footer {
 
 .footer-bottom p {
   font-size: clamp(6px, 2vw, 12px);
+}
+
+.footer a {
+  letter-spacing: 0px;
 }
 
 /* GRID */

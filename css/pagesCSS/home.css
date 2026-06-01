@@ -1,6 +1,38 @@
+/* Background image */
+.background-home {
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 430vh;
+    z-index: -1;
+}
+
+@media(prefers-reduced-motion: reduce) {
+    .background-home {
+        background-attachment: scroll;
+    }
+}
+
+.background-home-stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78vh;
+    background: linear-gradient(to bottom,
+            #00000038 0%, transparent 50%,
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(255, 255, 255, 0.5) 100%);
+}
+
+
 /* BLOC 1 INTRO */
 .intro-aPropo-title p {
-    font-size: clamp(9px, 1.1vw, 16px);
+    font-size: clamp(6px, 1.5vw, 15px);
     font-family: "Roboto Mono";
     text-transform: uppercase;
     font-weight: 200;
@@ -11,7 +43,6 @@
     font-family: 'Playfaire Display';
     font-style: italic;
 }
-
 
 /* grid */
 /* parent */
@@ -24,7 +55,7 @@
     column-gap: 10px;
 }
 
-/* enfants */
+/* child */
 .intro-aPropo-title {
     grid-column: 3 / 4;
     grid-row: 1/2;
@@ -110,53 +141,111 @@
 
 
 
-/* BLOC 2 SAISON 2026 */
+/* BLOC 2 EN CE MOMENT & SAISON 2026 */
+.background-home-stripe2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    background-color: #f4a85c8a;
+    border-radius: 30px 0 0 30px;
+}
+
+@media (max-width: 668px) {
+    .background-home-stripe2 {
+        border-radius: 30px;
+    }
+}
+
+.background-home-stripe3 {
+    position: absolute;
+    top: 0;
+    width: 137%;
+    height: 100%;
+    z-index: -1;
+    background-color: #b0350273;
+    border-radius: 30px;
+}
+
 .enCeMonent {
     position: relative;
     display: grid;
-    grid-template-columns: 2fr 3fr 1fr;
+    grid-template-columns: 10% 2fr 3fr 1fr 10%;
     grid-template-rows: 2fr 1fr;
-    column-gap: 30px;
-    margin-right: clamp(55px, 13vw, 180px);
-    margin-left: clamp(44px, 2vw, 200px);
 }
 
+.enCeMoment-titleH4 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    transform: rotate(-0.25turn);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 37%;
+    width: 315%;
+    left: -30%;
+    font-size: clamp(27px, 2.5vw, 30px);
+}
+
+@media (max-width: 868px) {
+    .enCeMoment-titleH4 {
+        height: 50%;
+        width: 315%;
+        left: -30%;
+    }
+}
+
+@media (max-width: 668px) {
+    .enCeMoment-titleH4 {
+        height: 78%;
+        width: 650%;
+        left: -180%;
+    }
+}
+
+
 .enCeMoment-affiche {
-    grid-column: 3 / 4;
+    grid-column: 4 / 5;
     grid-row: 1 / 3;
 
     position: relative;
-    width: clamp(211px, 33.5vw, 391px);
+    width: clamp(210px, 40vw, 470px);
     height: auto;
-
+    border-radius: 0 30px 30px 0;
 }
 
 .enCeMoment-saison2026 {
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
     grid-row: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media (max-width: 668px) {
     .enCeMonent {
         position: relative;
         display: grid;
-        grid-template-columns: 2fr 3fr 1fr;
+        grid-template-columns: 10% 2fr 3fr 1fr 10%;
         grid-template-rows: 1fr 65px 1fr;
-        margin: clamp(44px, 2vw, 200px);
     }
 
     .enCeMoment-affiche {
-        grid-column: 3 / 4;
+        grid-column: 4 / 5;
         grid-row: 2 / 3;
 
         position: relative;
         width: clamp(185px, 33.5vw, 391px);
         height: auto;
         bottom: 30px;
+        border-radius: 120px;
     }
 
     .enCeMoment-saison2026 {
-        grid-column: 2 / 3;
+        grid-column: 2 / 4;
         grid-row: 3 / 4;
         position: relative;
         display: flex;
@@ -166,39 +255,32 @@
     }
 }
 
-
-
 /* sous grid - En ce moment content */
 .enCeMoment-content {
-    grid-column: 1 / 3;
+    grid-column: 2 / 4;
     grid-row: 1;
     display: grid;
-    margin-left: clamp(55px, 13vw, 200px);
+    margin-left: clamp(55px, 5vw, 200px);
     row-gap: 7px;
     position: relative;
     height: min-content;
     grid-auto-rows: 45px 75px 120px;
+    padding-left: 10px;
+}
+
+@media (max-width: 668px) {
+    .enCeMoment-content {
+        grid-column: 2 / 5;
+        grid-row: 1;
+    }
 }
 
 .enCeMoment-content h2 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    padding-left: 10px;
 }
 
-.enCeMoment-content h4 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-    transform: rotate(-0.25turn);
-    position: relative;
-    display: flex;
-    font-size: clamp(24px, 2.5vw, 28px);
-    height: 300px;
-    width: max-content;
-    flex-direction: column;
-    bottom: clamp(45px, 10vw, 40px);
-    left: clamp(20px, 2vw, 0px);
-    margin: -5%;
-}
 
 .enCeMoment-content-artiste {
     grid-column: 1 / 2;
@@ -215,12 +297,15 @@
     grid-row: 3 / 4;
 
     position: relative;
-    bottom: 20px;
 }
 
 
+.enCeMoment-saison2026 h2,
+.enCeMoment-saison2026 p {
+    padding-left: 10px;
+}
 
-
+/*  */
 
 
 
@@ -252,6 +337,8 @@
     }
 }
 
+
+
 /* TITRE */
 .intro-projetEvnmt-titleWrapper {
     grid-column: 2 / 3;
@@ -266,6 +353,8 @@
         grid-row: 2 / 5;
         border: solid;
         border-width: 2px;
+        border-radius: 30px;
+        border-color: linear-gradient(to bottom, #ffbd45 0%, #b03502 100%);
     }
 }
 
@@ -313,6 +402,8 @@
 
     border: solid;
     border-width: 2px;
+    border-radius: 30px;
+    border-color: #ffbd45;
 }
 
 @media (max-width: 668px) {
@@ -352,6 +443,8 @@
 
     border: solid;
     border-width: 2px;
+    border-radius: 30px;
+    border-color: brown;
 }
 
 @media (max-width: 668px) {
@@ -369,6 +462,7 @@
 
     padding: 30px 0;
 }
+
 
 
 
@@ -402,6 +496,9 @@
     }
 }
 
+/*  */
+
+
 
 
 
@@ -421,9 +518,8 @@
     display: grid;
     grid-template-columns: 1fr 8vw 26vw 8vw 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-
-    margin-top: 100px;
-    margin: clamp(10px, 5vw, 65px);
+    margin:
+        clamp(10px, 15vw, 142px) clamp(10px, 10vw, 142px)
 }
 
 .separate-social-1 {
