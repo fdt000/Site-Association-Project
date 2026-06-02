@@ -1,3 +1,10 @@
+
+/* BackGround Color */
+.contact{
+   background-color: rgba(255, 191, 146, 0.616);
+}
+
+
 /* GRID contacte */
 .contact-content {
     display: grid;
@@ -38,7 +45,7 @@
 }
 
 .contact-content-title h2 {
-    font-size: clamp(35px, 3.5vw, 42px);
+    font-size: clamp(35px, 3.5vw, 47px);
 }
 
 /*  */
@@ -60,7 +67,7 @@
     grid-row: 1 / 4;
     display: flex;
     justify-content: center;
-    border: 2px solid black;
+    border: 3px solid rgb(148, 0, 0);
     padding: 50px;
 }
 

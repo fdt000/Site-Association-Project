@@ -1,0 +1,27 @@
+.background-stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78vh;
+    background: linear-gradient(to bottom, #fff 20%, #fff 50%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0.36) 100%);
+}
+
+/* Background image */
+.background-main  {
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 430vh;
+    z-index: -1;
+}
+
+@media(prefers-reduced-motion: reduce) {
+    .background-main {
+        background-attachment: scroll;
+    }
+}

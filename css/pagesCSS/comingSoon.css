@@ -1,0 +1,35 @@
+.comingsoon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5%;
+}
+
+.comingsoon-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.comingsoon-content h1 {
+    font-size: clamp(35px, 5.5vw, 70px);
+    margin-right: 20px;
+}
+
+.cominsoon-content p {
+    font-size: clamp(8px, 2vw, 13px);
+}
+
+.comingsoon-img {
+    position: relative;
+    width: clamp(200px, 26vw, 430px);
+    height: auto;
+}
+
+.comingsoon-img img {
+    width: 100%;
+    height: auto;
+}

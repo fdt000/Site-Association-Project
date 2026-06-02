@@ -69,3 +69,20 @@
 
     padding: 15px 75px;
 }
+
+
+
+/* PAGE COMING SOON */
+.btn-container--comingsoon-btn {
+    display: flex;
+    justify-content: center;
+    padding: 15px 75px;
+}
+.btn--comingsoon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 20px;
+    font-size: clamp(10px, 4vw, 20px);
+}

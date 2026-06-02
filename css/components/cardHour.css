@@ -46,7 +46,7 @@
 .card-hour--contact .white-line {
     position: relative;
     height: 2px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(148, 0, 0);
     border-radius: 25%;
     width: clamp(35vw, 17vw, 80);
     margin: 10px 0 20px 0;
@@ -56,7 +56,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(148, 0, 0);
     border-radius: 50%;
     top: -6px;
     left: -3px;

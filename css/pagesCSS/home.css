@@ -1,33 +1,5 @@
-/* Background image */
-.background-home {
-    background-attachment: fixed;
-    background-position: bottom;
-    background-size: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 430vh;
-    z-index: -1;
-}
 
-@media(prefers-reduced-motion: reduce) {
-    .background-home {
-        background-attachment: scroll;
-    }
-}
 
-.background-home-stripe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 78vh;
-    background: linear-gradient(to bottom,
-            #00000038 0%, transparent 50%,
-            rgba(255, 255, 255, 0.5) 50%,
-            rgba(255, 255, 255, 0.5) 100%);
-}
 
 
 /* BLOC 1 INTRO */

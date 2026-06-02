@@ -12,6 +12,7 @@
 @import url('./components/logo.css');
 @import url('./components/separate.css');
 @import url('./components/socialMedia.css');
+@import url('./components/backgroundStripe.css');
 
 
 /* Pages */
@@ -22,6 +23,7 @@
 @import url('./pagesCSS/aPropos.css');
 @import url('./pagesCSS/contact.css');
 @import url('./pagesCSS/modifiable.css');
+@import url('./pagesCSS/comingSoon.css');
 
 /* fonts */
 @font-face {
