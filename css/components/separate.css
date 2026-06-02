@@ -109,6 +109,7 @@
 /* PAGE CONTACT */
 .separate--contate img {
   position: absolute;
+  width: clamp(151px, 44vw, 300px);
   width: 10%;
   height: auto;
   bottom: -1px;
