@@ -1,7 +1,3 @@
-
-
-
-
 /* BLOC 1 INTRO */
 .intro-aPropo-title p {
     font-size: clamp(6px, 1.5vw, 15px);
@@ -120,8 +116,22 @@
     width: 100%;
     z-index: -1;
     height: 100%;
-    background-color: #f4a85c8a;
     border-radius: 30px 0 0 30px;
+    background: conic-gradient(from 90deg, #a6553c8a 0.000deg,
+            #6c3d268f 180deg, #663b2aab calc(35.692deg + 0.1deg),
+            #665f2a 180deg, #65642f calc(55.385deg + 0.1deg),
+            #65642f 83.077deg, #686935 calc(83.077deg + 0.1deg),
+            #695235 110.769deg, #6f703c calc(110.769deg + 0.1deg),
+            #70483c 138.462deg, #7b7744 calc(138.462deg + 0.1deg),
+            #7b5b44 174.154deg, #8a7e4d calc(166.154deg + 0.1deg),
+            #9d7e6aab 141.846deg, #d3c295b5 calc(270deg + 0.1deg),
+            #9b8756 172.538deg, #ae7e61 calc(213.538deg + 0.1deg),
+            #ae9061bd 237deg, #c1996d calc(254.231deg + 0.1deg),
+            #c1996d 234.923deg, #facbb8 calc(270deg + 0.1deg),
+            #d3a379 201.615deg, #e3ae86 calc(302.615deg + 0.1deg),
+            #e3ae86 220.308deg, #f6d7ac calc(341.308deg + 0.1deg) 360.000deg);
+
+
 }
 
 @media (max-width: 668px) {
@@ -136,7 +146,19 @@
     width: 137%;
     height: 100%;
     z-index: -1;
-    background-color: #b0350273;
+    background: conic-gradient(from 90deg, #b2431d 0deg,
+            #ac30049c 25.692deg, #ce6a14a8 calc(27deg + 0.1deg),
+            #fcbf1e 55.385deg, #a07f4ac7 calc(55.385deg + 0.1deg),
+            #bba04fc9 81.077deg, #d1a95dc4 calc(90deg + 0.1deg),
+            #ac9064 86.769deg, #9d7e44 calc(109.769deg + 0.1deg),
+            #9a7f4bb8 81.462deg, #7b5e44db calc(62.462deg + 0.1deg),
+            #b0785533 64.154deg, #9c6e58e3 calc(70.154deg + 0.1deg),
+            #e0995ba8 209.846deg, #dbaa7d calc(218.846deg + 0.1deg),
+            #dcac7c 172.538deg, #dbaa7d calc(210.538deg + 0.1deg),
+            #ddab7d 244.231deg, #eabc63 calc(249.231deg + 0.1deg),
+            #c1996d 279.923deg, #d3ac79 calc(276.923deg + 0.1deg),
+            #bea8738f 305.615deg, #f6dbb4 calc(306.615deg + 0.1deg),
+            #f6d599 302.308deg, #a13107a3 calc(332.308deg + 0.1deg) 370deg);
     border-radius: 30px;
 }
 
@@ -323,10 +345,10 @@
     .intro-projetEvnmt-titleWrapper {
         grid-column: 3 / 5;
         grid-row: 2 / 5;
-        border: solid;
+        border: solid cornsilk;
         border-width: 2px;
         border-radius: 30px;
-        border-color: linear-gradient(to bottom, #ffbd45 0%, #b03502 100%);
+
     }
 }
 
@@ -375,7 +397,7 @@
     border: solid;
     border-width: 2px;
     border-radius: 30px;
-    border-color: #ffbd45;
+    border-color: #ffbe4563;
 }
 
 @media (max-width: 668px) {
@@ -416,7 +438,7 @@
     border: solid;
     border-width: 2px;
     border-radius: 30px;
-    border-color: brown;
+    border-color: #aa40298f;
 }
 
 @media (max-width: 668px) {

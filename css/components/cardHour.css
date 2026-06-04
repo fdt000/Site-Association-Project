@@ -13,13 +13,13 @@
 }
 
 .card-hour h3 {
-    font-size: clamp(8px, 1.5vw, 16px);
+    font-size: clamp(18px, 1.5vw, 24px);
     margin-top: 8px;
 }
 
 .card-hour p {
     text-align: right;
-    font-size: clamp(6px, 1.5vw, 14px);
+    font-size: clamp(13px, 1.5vw, 18px);
     margin-top: 10px;
     color: rgb(255, 243, 243);
 }
@@ -43,13 +43,25 @@
 
 
 /* PAGES CONTACT */
+.card-hour--contact .card-hour-container {
+    display: flex;
+    position: relative;
+    padding: 0px 20px;
+}
+
 .card-hour--contact .white-line {
     position: relative;
     height: 2px;
     background-color: rgb(148, 0, 0);
     border-radius: 25%;
-    width: clamp(35vw, 17vw, 80);
-    margin: 10px 0 20px 0;
+    width: clamp(30vw, 10vw, 75vw);
+    margin: 10px 0 35px 0;
+}
+
+@media (max-width: 668px) {
+    .card-hour--contact .white-line {
+        margin: 10px 0 18px 0;
+    }
 }
 
 .card-hour--contact .white-line-circle {
@@ -63,19 +75,20 @@
 }
 
 .card-hour--contact h3 {
-    color: rgb(0, 0, 0);
-    font-size: clamp(8px, 2vw, 24px);
-    text-transform: uppercase;
-    font-weight: 400;
-    left: 10%;
     position: relative;
     margin-top: 85px;
+    left: 10%;
+    font-size: clamp(15px, 2vw, 24px);
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 48px;
 }
 
 .card-hour--contact p {
     color: rgb(0, 0, 0);
-    font-size: clamp(6px, 1.5vw, 14px);
-    margin-left: 30px;
+    font-size: clamp(10px, 1.5vw, 14px);
+    margin-left: clamp(15px, 2vw, 30px);
     text-align: left;
 }
 
@@ -84,4 +97,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    /* justify-content: center;
+    align-items: center; */
 }

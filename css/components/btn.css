@@ -70,6 +70,26 @@
     padding: 15px 75px;
 }
 
+/* PAGE CONTACT */
+.btn-container--contact {
+    display: flex;
+    justify-content: center;
+    padding: 15px 75px;
+}
+
+.btn--tel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(10px, 2vw, 18px);
+}
+
+.btn--email-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(10px, 2vw, 18px);
+}
 
 
 /* PAGE COMING SOON */
@@ -78,6 +98,7 @@
     justify-content: center;
     padding: 15px 75px;
 }
+
 .btn--comingsoon-btn {
     display: flex;
     justify-content: center;
