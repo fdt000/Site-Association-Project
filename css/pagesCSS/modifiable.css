@@ -3,6 +3,8 @@
 /* MODIFIER LES CLASSE DANS LE HTML SAISON 2026 */
 /* expo-finish : passer le background en grid */
 /* en-cours : ajouter un bord coloré */
+
+/* Modifier PAGES HOME / L'artiste et expo du moment directement dans le html  */
 .expo-finish {
     background-color: #c9c9c9;
 }

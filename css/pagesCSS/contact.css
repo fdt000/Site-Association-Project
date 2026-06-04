@@ -60,7 +60,7 @@
 @media (max-width: 768px) {
     .contact-content {
         display: grid;
-        grid-template-columns: 5vw 44vw 14vw 27vw 5vw;
+        grid-template-columns: 5vw 44vw 12vw 33vw 5vw;
         grid-template-rows: 10vh 65vh 18vh;
     }
 
@@ -107,11 +107,11 @@
     justify-content: center;
     border: 3px solid rgb(148, 0, 0);
     border-radius: 30px;
-    padding: 50px;
+    padding: 25px;
 }
 
 .map-google {
-    width: clamp(25vw, 3vw, 30vw);
+    width: clamp(160px, 25vw, 320px);
     height: auto;
     border-radius: 150px;
 }
@@ -193,7 +193,7 @@
         position: relative;
         display: grid;
         grid-template-columns: 5vw 0.5fr 25vw 0.5fr 5vw;
-        grid-template-rows: 26vh 3vh 35vh;
+        grid-template-rows: 36vh 6vh 25vh;
         margin-bottom: 10%;
     }
 
@@ -238,6 +238,10 @@
     .contact-address-map {
         grid-column: 3 / 5;
         grid-row: 2 / 4;
-        padding: 50px;
+        padding: 35px;
+    }
+
+    .map-google {
+        width: 45vw;
     }
 }

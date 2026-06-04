@@ -32,6 +32,7 @@ a {
     position: relative;
     top: 95px;
     margin: 12px 0;
+    text-align: center;
 }
 
 
@@ -89,8 +90,8 @@ a {
 
 @media (max-width: 768px) {
     .header-navbar a {
-    font-size: clamp(13px, 2vw, 16px);
-}
+        font-size: clamp(13px, 2vw, 16px);
+    }
 
     .navbar--header .navbar-burger {
         display: block;
@@ -166,12 +167,10 @@ a {
                 #FFF 100%);
     }
 
-    .navbar--header
-    .navbar-burger.active
-    .navbar-burger-light-column {
+    .navbar--header .navbar-burger.active .navbar-burger-light-column {
         transition: all 0.3s ease;
         opacity: 20%;
-    } 
+    }
 
     .navbar--header .navbar-menu-item-link.active::after {
         display: none;

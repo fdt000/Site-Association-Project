@@ -230,11 +230,10 @@
     .enCeMoment-affiche {
         grid-column: 4 / 5;
         grid-row: 2 / 3;
-
         position: relative;
-        width: clamp(185px, 33.5vw, 391px);
+        width: clamp(100px, 33vw, 391px);
         height: auto;
-        bottom: 30px;
+        bottom: clamp(10px, 6vw, 36px);
         border-radius: 120px;
     }
 
@@ -257,7 +256,7 @@
     margin-left: clamp(55px, 5vw, 200px);
     row-gap: 7px;
     position: relative;
-    height: min-content;
+    height: 30vh;
     grid-auto-rows: 45px 75px 120px;
     padding-left: 10px;
 }
@@ -273,17 +272,24 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     padding-left: 10px;
+    font-size: clamp(17px, 2.2vw, 35px);
 }
 
 
 .enCeMoment-content-artiste {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    font-size: clamp(15px, 1.9vw, 22px);
 }
 
 .enCeMoment-content-date {
+    position: relative;
     grid-column: 2 / 3;
     grid-row: 2 / 4;
+
+    font-size: clamp(20px, 3vw, 35px);
+    bottom: 30px;
+
 }
 
 .enCeMoment-content-texte {
@@ -291,12 +297,27 @@
     grid-row: 3 / 4;
 
     position: relative;
+    font-size: clamp(14px, 1.6vw, 20px);
 }
 
 
 .enCeMoment-saison2026 h2,
 .enCeMoment-saison2026 p {
     padding-left: 10px;
+}
+
+@media (max-width: 668px) {
+    .enCeMoment-content h2 {
+        font-size: clamp(16px, 4vw, 30px);
+    }
+
+    .enCeMoment-content-artiste {
+        font-size: clamp(15px, 3vw, 30px);
+    }
+
+    .enCeMoment-content-date {
+        font-size: clamp(20px, 5vw, 45px);
+    }
 }
 
 /*  */
@@ -393,11 +414,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: inherit;
-
-    border: solid;
-    border-width: 2px;
     border-radius: 30px;
-    border-color: #ffbe4563;
+    background-color: #e6f4fc;
 }
 
 @media (max-width: 668px) {
@@ -434,11 +452,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: inherit;
-
-    border: solid;
-    border-width: 2px;
+    border: solid 2px #e6f4fc;
     border-radius: 30px;
-    border-color: #aa40298f;
 }
 
 @media (max-width: 668px) {
