@@ -3,7 +3,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 5vw 1fr 1fr 5vw;
-    grid-template-rows: 9vw 245px 200px 460px;
+    grid-template-rows: 15% 20% 20% 50%;
     margin: 15% 0;
 }
 
@@ -16,8 +16,8 @@
     justify-content: center;
 }
 
-.aPropo-intro-content-title {
-    font-size: clamp(24px, 3.5vw, 40px);
+.aPropo-intro-content-title h1 {
+    font-size: clamp(24px, 3.5vw, 45px);
 }
 
 .aPropo-intro-content-title p {
@@ -49,13 +49,14 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .aPropo-intro-content-portrait-img {
-    width: clamp(200px, 25vw, 300px);
+    width: clamp(195px, 25vw, 450px);
     height: auto;
-    margin-top: 26px;
+    margin-top: 4vh;
+    border-radius: 30px 30px 0px 30px;
 }
 
 .aPropo-intro-content-portrait p {
@@ -70,11 +71,11 @@
     grid-row: 3/5;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .aPropo-intro-content-logoIlstr-img {
-    width: clamp(200px, 30vw, 410px);
+    width: clamp(250px, 32vw, 440px);
     height: auto;
 }
 
@@ -83,12 +84,106 @@
 .aPropo-intro-content2 {
     grid-column: 3/4;
     grid-row: 4/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .aPropo-intro-content2 p {
     text-align: right;
     font-style: italic;
 }
+
+/* RESPONSIVE */
+@media (max-width: 668px) {
+
+    /* BLOC 1 TEXTE  */
+    .aPropo-intro {
+        position: relative;
+        display: grid;
+        grid-template-columns: 5vw 1fr 1fr 5vw;
+        grid-template-rows: 45% 36% 0% 39%;
+        margin: 15% 0;
+    }
+
+
+    /* TITRE & TEXTE 1 */
+    .aPropo-intro-content {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* texte 1 */
+    .aPropo-intro-content-text {
+        grid-column: 2/4;
+        grid-row: 2/4;
+    }
+
+    .aPropo-intro-content-text p {
+        text-align: left;
+        font-style: italic;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+
+    /* BLOC PORTRAIT  */
+    .aPropo-intro-content-portrait {
+        grid-column: 3/4;
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .aPropo-intro-content-portrait-img {
+        width: clamp(160px, 25vw, 450px);
+        height: auto;
+        margin-top: 0vh;
+        border-radius: 30px 30px 30px 0px;
+    }
+
+    .aPropo-intro-content-portrait p {
+        text-align: right;
+        font-size: clamp(13px, 2vw, 18px);
+    }
+
+
+    /* logo ILSTR */
+    .aPropo-intro-content-logoIlstr {
+        grid-column: 2/3;
+        grid-row: 3/5;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .aPropo-intro-content-logoIlstr {
+        grid-column: 2/3;
+        grid-row: 3/5;
+        display: none;
+    }
+
+
+    /*  texte 2  */
+    .aPropo-intro-content2 {
+        grid-column: 2/4;
+        grid-row: 4/5;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .aPropo-intro-content2 p {
+        text-align: left;
+        font-style: italic;
+    }
+}
+
 
 
 
