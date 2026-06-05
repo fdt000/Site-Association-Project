@@ -115,3 +115,13 @@
   bottom: -1px;
   left: -5%;
 }
+
+
+/* PAGE A PROPO */
+.separate--apropo img {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  bottom: 0px;
+  left: 93%;
+}
