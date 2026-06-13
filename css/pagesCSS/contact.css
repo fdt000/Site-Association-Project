@@ -48,8 +48,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid 2px #940000;
     border-radius: 30px;
+    border: solid 5px #94000000;
+    border-radius: 30px;
+    background-color: #fff4e3;
 }
 
 .contact-content-title h2 {

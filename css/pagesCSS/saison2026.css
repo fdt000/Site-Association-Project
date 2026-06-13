@@ -84,7 +84,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 65px;
-    row-gap: clamp(20px, 5vw, 40px);
+    row-gap: clamp(50px, 6vw, 100px);
     margin: 0 20px;
 }
 
@@ -107,11 +107,24 @@
     align-items: center;
 }
 
-@media (max-width: 768px) {
-    .saison2026-prog-title h2 {
-        font-size: 26px;
-    }
+.saison2026-prog-title h2 {
+    font-size: clamp(18px, 3.5vw, 60px);
 }
+
+.saison2026-prog-title p {
+    font-size: clamp(8px, 3.5vw, 30px);
+}
+
+
+/* @media (max-width: 668px) {
+    .saison2026-prog-title h2 {
+        font-size: clamp(40px, 3vw, 80px);
+    }
+
+    .saison2026-prog-title p {
+        font-size: clamp(10px, 3vw, 50px);
+    }
+} */
 
 
 /* LEFT */
@@ -156,24 +169,6 @@
         grid-row-gap: 0.5em;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .saison2026-prog-content span h4 {
     grid-column: 1;
